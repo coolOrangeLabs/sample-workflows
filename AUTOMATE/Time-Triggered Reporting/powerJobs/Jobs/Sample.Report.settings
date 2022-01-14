@@ -1,0 +1,9 @@
+{
+ "Trigger":
+  {
+    "TimeBased":	"0 0 8 ? * MON,TUE,WED,THU,FRI *",
+    //"Vault":		"Enter the Vault database name here and uncomment this line",
+    "Priority":		100,
+    "Description":	"Queries Vault and creates a Report as PDF"
+  }
+}
