@@ -12,7 +12,6 @@
 ## Disclaimer
 
 THE SAMPLE CODE ON THIS REPOSITORY IS PROVIDED "AS IS" WITHOUT WARRANTY OF ANY KIND, EITHER EXPRESSED OR IMPLIED, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE, OR NON-INFRINGEMENT.
-
 THE USAGE OF THIS SAMPLE IS AT YOUR OWN RISK AND **THERE IS NO SUPPORT** RELATED TO IT.
 
 ## Description
@@ -27,16 +26,14 @@ In order to obtain a file from Vault and with that running the script in a code 
 if (-not $IAmRunningInJobProcessor) {
     Import-Module powerJobs
     Open-VaultConnection -Server "localhost" -Vault "Vault" -User "Administrator" -Password ""
+    $workingDirectory = "C:\TEMP\powerJobs Processor\" + (New-Object System.Guid).ToString()
     $file = Get-VaultFile -Properties @{Name="Scissors.idw"}
 }
 ```
 
 This additional code establishes a connection to Vault and uses the file 'Scissors.idw' for the particular job if the script gets executed by anything other than powerJobs.
 
-## At your own risk
-The usage of these samples is at your own risk. There is no free support related to the samples. However, if you have any questions, you can visit https://doc.coolorange.com/ for product documentations or you can start a conversation in our support forum at http://support.coolorange.com/support/discussions
-
 ## Author
-coolOrange S.r.l.  
+coolOrange S.r.l.
 
-![coolOrange](https://i.ibb.co/NmnmjDT/Logo-CO-Full-colore-RGB-short-Payoff.png)
+<img src="https://i.ibb.co/NmnmjDT/Logo-CO-Full-colore-RGB-short-Payoff.png" width="250">
