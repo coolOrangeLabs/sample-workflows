@@ -1,4 +1,4 @@
-[![powerJobs](https://img.shields.io/badge/powerJobs-22-orange.svg)](https://www.coolorange.com/powerjobs)
+[![powerJobs](https://img.shields.io/badge/powerJobs_Processor-22.0.19-orange.svg)](https://www.coolorange.com/powerjobs)
 
 # Time-Triggered Reporting
 
@@ -6,27 +6,27 @@
 This sample workflow uses coolOrange **powerJobs** to automatically query files from Vault, based on an existing "Saved Search". It uses the search result to render a Vault Report to a PDF file. Finally, the generated PDF file gets checked-in to Vault and exported to a network share.
 
 ## Prerequisites
-[powerJobs](https://www.coolorange.com/powerjobs) must be installed on the Vault Job Processor machine(s)
+[powerJobs](https://www.coolorange.com/powerjobs) version 22.0.19 or later must be installed on the Vault Job Processor machine(s)
 
 ## Installation
-Download all files from the current subdirectory of this repository to *C:\ProgramData\coolOrange
+Download all files from the current subdirectory of this repository to *C:\ProgramData\coolOrange*
 
 ## Job Settings
 
 ### ReportFileLocation
 Full Path of the RDLC report template file. This file needs to accessible by powerJobs on the Vault Job Processor machine  
-Defaults to: C:\Program Files\Autodesk\Vault Client 2022\Explorer\Report Templates\File Transmittal.rdlc
+Defaults to: *C:\Program Files\Autodesk\Vault Client 2022\Explorer\Report Templates\File Transmittal.rdlc*
 
 ### SavedSearchName
 Name of the Saved Search. This Saved Search needs to available on the Vault Job Processor machine with the exact same server name and Vault name
 
 ### PdfFileName
 Name of the Report exported to PDF  
-E.g.: AllCheckedOutFiles.pdf
+E.g.: *AllCheckedOutFiles.pdf*
 
 ### PdfVaultFolder
 Specify a Vault folder in which the PDF should be stored (e.g. \$/Designs/PDF), or leave the setting empty to not store the report in Vault  
-Defaults to: \$/Designs/Reports
+Defaults to: *\$/Designs/Reports*
 
 ### PdfNetworkFolder
 Specify a network share into which the PDF should be copied (e.g. \\\\SERVERNAME\Share\Public\Reports\), or leave the setting empty to not copy the report to a shared folder
