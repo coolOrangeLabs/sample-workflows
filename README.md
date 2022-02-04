@@ -1,11 +1,11 @@
-# samples
+# Workflows
 
 [![Windows](https://img.shields.io/badge/Platform-Windows-lightgray.svg)](https://www.microsoft.com/en-us/windows/)
 [![PowerShell](https://img.shields.io/badge/PowerShell-5-blue.svg)](https://microsoft.com/PowerShell/)
 [![Vault](https://img.shields.io/badge/Autodesk%20Vault-2022-yellow.svg)](https://www.autodesk.com/products/vault/)
 
-[![powerJobs](https://img.shields.io/badge/coolOrange%20powerJobs-22-orange.svg)](https://www.coolorange.com/powerjobs)
-[![powerEvents](https://img.shields.io/badge/coolOrange%20powerEvents-22-orange.svg)](https://www.coolorange.com/powerevents)
+[![powerJobs Processor](https://img.shields.io/badge/coolOrange%20powerJobs%20Processor-22-orange.svg)](https://www.coolorange.com/powerjobs)
+[![powerJobs Client](https://img.shields.io/badge/coolOrange%20powerJobs%20Client-22-orange.svg)](https://www.coolorange.com/powerjobs)
 [![powerGate](https://img.shields.io/badge/coolOrange%20powerGate-22-orange.svg)](https://www.coolorange.com/powergate)
 [![powerPLM](https://img.shields.io/badge/coolOrange%20powerPLM-22-orange.svg)](https://www.coolorange.com/powerplm)
 
@@ -16,22 +16,11 @@ THE USAGE OF THIS SAMPLE IS AT YOUR OWN RISK AND **THERE IS NO SUPPORT** RELATED
 
 ## Description
 
-This repository contains various jobs and scripts that demonstrate the power and flexibility of the AUTOMATE products *powerJobs* and *powerEvents* as well as the CONNECT products *powerGate* and *powerPLM*. You can use the sample workflows to add additional value to these products.
+This repository contains various jobs and scripts that demonstrate the power and flexibility of the AUTOMATE products *powerJobs Processor* and *powerJobs Client* as well as the CONNECT products *powerGate* and *powerPLM*. You can use the workflows to add additional value to your installations.
 
-## Debugging with powerJobs
+## Installation
 
-In order to obtain a file from Vault and with that running the script in a code editor such as 'Windows PowerShell ISE' or 'Visual Studio Code' instead of powerJobs, the following code can be added to the ps1 scripts.
-
-```powershell
-if (-not $IAmRunningInJobProcessor) {
-    Import-Module powerJobs
-    Open-VaultConnection -Server "localhost" -Vault "Vault" -User "Administrator" -Password ""
-    $workingDirectory = "C:\TEMP\powerJobs Processor\" + (New-Object System.Guid).ToString()
-    $file = Get-VaultFile -Properties @{Name="Scissors.idw"}
-}
-```
-
-This additional code establishes a connection to Vault and uses the file 'Scissors.idw' for the particular job if the script gets executed by anything other than powerJobs.
+Each workflow can be downloaded and copied to the Vault Client or Vault JobProcessor machines. To speed up that process a workflow installer is available that guides you through the installation process. You can download the workflow installer from the releases page: [https://github.com/coolOrangeLabs/workflows/releases/latest](https://github.com/coolOrangeLabs/workflows/releases/latest)
 
 ## Author
 coolOrange S.r.l.
