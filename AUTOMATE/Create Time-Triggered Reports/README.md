@@ -3,7 +3,7 @@
 # Create Time-Triggered Reports
 
 ## Description
-This sample workflow uses coolOrange **powerJobs** to automatically query files from Vault, based on an existing "Saved Search". It uses the search result to render a Vault Report to a PDF file. Finally, the generated PDF file gets checked-in to Vault and exported to a network share.
+This workflow uses coolOrange **powerJobs Processor** to automatically query files from Vault, based on an existing "Saved Search". It uses the search result to render a Vault Report to a PDF file. Finally, the generated PDF file gets checked-in to Vault and exported to a network share.
 
 ## Prerequisites
 [powerJobs](https://www.coolorange.com/powerjobs) version 22.0.19 or later must be installed on the Vault Job Processor machine(s)
@@ -13,7 +13,7 @@ The settings of jobs can be adjusted using the [powerJobs  settings dialog](http
 
 ## Job Trigger
 
-In order to configure the workflow to be executed in a specific interval the file *C:\ProgramData\coolOrange\powerJobs\Jobs\Sample.Report.settings* must be configured:
+In order to configure the workflow to be executed in a specific interval the file *C:\ProgramData\coolOrange\powerJobs\Jobs\COOLORANGE.Report.settings* must be configured:
 
 ```javascript
 {
