@@ -1,4 +1,4 @@
-# Workflows
+# Sample Workflows
 
 [![Windows](https://img.shields.io/badge/Platform-Windows-lightgray.svg)](https://www.microsoft.com/en-us/windows/)
 [![PowerShell](https://img.shields.io/badge/PowerShell-5-blue.svg)](https://microsoft.com/PowerShell/)
@@ -20,7 +20,10 @@ This repository contains various jobs and scripts that demonstrate the power and
 
 ## Installation
 
-Each workflow can be downloaded and copied to the Vault Client or Vault JobProcessor machines. To speed up that process a workflow installer is available that guides you through the installation process. You can download the workflow installer from the releases page: [https://github.com/coolOrangeLabs/workflows/releases/latest](https://github.com/coolOrangeLabs/workflows/releases/latest)
+Each workflow can be downloaded and copied to the Vault Client or Vault JobProcessor machines. To speed up that process a workflow installer is available that guides you through the installation process. The workflow installer can be downloaded [here](https://github.com/coolOrangeLabs/sample-workflows/releases/latest).
+The workflow installer does not distinguish between server and client components and cannot not be used for deployments. It should only be used to install the workflows on a test- or demo-environment where powerJobs Processor and powerJobs Client are installed on a single machine.
+
+If you need help with the customization or the deployment of a sample workflow and want to use it for productive puropses please contact sales@coolorange.com.
 
 ## Author
 coolOrange S.r.l.
