@@ -1,8 +1,19 @@
+#==============================================================================#
+# THIS SCRIPT/CODE IS PROVIDED "AS IS" WITHOUT WARRANTY OF ANY KIND, EITHER    #
+# EXPRESSED OR IMPLIED, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES  #
+# OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE, OR NON-INFRINGEMENT.   #
+#                                                                              #
+# Copyright (C) 2022 COOLORANGE S.r.l.                                         #
+#==============================================================================#
+
+#region Debug
 if (-not $IAmRunningInJobProcessor) {
     Import-Module powerJobs
-    Open-VaultConnection -Server "localhost" -Vault "Vault" -User "Administrator" -Password ""
+    # https://doc.coolorange.com/projects/coolorange-powervaultdocs/en/stable/code_reference/commandlets/open-vaultconnection.html
+    Open-VaultConnection
     $workingDirectory = "C:\TEMP\powerJobs Processor\" + (New-Object System.Guid).ToString()
 }
+#endregion
 
 Write-Host "Starting job '$($job.Name)'..."
 
