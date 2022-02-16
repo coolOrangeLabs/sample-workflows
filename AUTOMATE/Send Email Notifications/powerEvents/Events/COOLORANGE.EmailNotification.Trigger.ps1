@@ -77,11 +77,12 @@ function SelectGroupAndSubmitJob($files, $successful) {
     $cmd = [PowerShell]::Create().AddScript({
         Add-Type -AssemblyName PresentationFramework, PresentationCore, WindowsBase
         $global:sync.window = [Windows.Markup.XamlReader]::Parse($global:xaml)
+        $global:sync.result = $false
         $global:sync.grid = $global:sync.window.FindName('EntityGrid')
         $global:sync.grid.ItemsSource = $data
         $global:sync.button = $global:sync.window.FindName('Ok')
         $global:sync.button.add_Click({
-            $global:sync.window.DialogResult = $true
+            $global:sync.result = $true
             $global:sync.window.Close()
         })   
         $global:sync.window.ShowDialog()
@@ -91,8 +92,10 @@ function SelectGroupAndSubmitJob($files, $successful) {
     $cmd.Invoke() | Out-Null
 
     $groupNames = ($data | Where-Object { $_.Checked } | Select-Object -ExpandProperty Name) -join ";"
-    if (-not $groupNames -or $global:sync.window.DialogResult -ne $true) {
-        [System.Windows.Forms.MessageBox]::Show("Please don't forget to inform all relevant stakeholders about your changes!", "COOLORANGE powerJobs Client: Notification canceled!", "OK", "Warning")
+    if ($global:sync.result -ne $true) {
+        [System.Windows.Forms.MessageBox]::Show("No group selected. Please don't forget to inform all relevant stakeholders about your changes!", "COOLORANGE powerJobs Client: Group selection canceled!", "OK", "Warning")
+    } elseif (-not $groupNames) {
+        [System.Windows.Forms.MessageBox]::Show("No group selected. Please don't forget to inform all relevant stakeholders about your changes!", "COOLORANGE powerJobs Client: No group selected!", "OK", "Warning")
     } else {
         $fileIds = $affectedFiles.Id -join ";"
         $jobType = "COOLORANGE.EmailNotification"
