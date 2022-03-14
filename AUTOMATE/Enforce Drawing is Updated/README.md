@@ -3,7 +3,7 @@
 # Enforce Drawing is Updated
 
 ## Description
-When a PDF or any other neutral format of an Inventor drawing is created by powerJobs Processor there is the chance that an outdated Inventor drawing is used to publish the PDF. This can happen if a change is performed to a part or an assembly that is used in the drawing and the drawing is not updated after the model was changed.  
+When a PDF or any other neutral format of an Inventor drawing is created by powerJobs Processor there is the chance that an outdated Inventor drawing is used to publish the PDF. This can happen if a change is performed to a part or an assembly that is used in the drawing and the drawing is not opened and updated after the model was changed.  
 
 This workflow uses coolOrange **powerJobs Client** to restrict the release of a drawing file - and with that the generation of the neutral format - when when the drawing is older than any of the parts or assemblies that are used in the drawing's structure. For performance reasons, the workflow does not open the drawing file but analyses the references stored in the Vault database to find all files that are involved in the structure of the drawings that are about to be released.
 

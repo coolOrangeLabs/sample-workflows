@@ -30,6 +30,10 @@ function EnforceDrawingIsUpdated($files, $successful) {
             $true,
             $false,
             $false)
+
+        if (-not $fileAssocLites) {
+            continue
+        }
     
         $children = $vault.DocumentService.GetLatestFilesByIds($fileAssocLites.CldFileId)
         foreach ($child in $children) {
