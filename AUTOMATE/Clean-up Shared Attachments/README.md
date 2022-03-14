@@ -14,7 +14,7 @@ The script assumes that the PDF on the network folder is also linked as an attac
 The PDF on the network folder is a copy of the linked attachment of the drawing in Vault.
 
 ## Event Settings
-The following settings must be adjusted in the events script COOLORANGE.CleanUpSharedPDF.ps1:
+The following settings must be adjusted in the events script:
 
 ```powershell
 #region Settings
