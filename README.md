@@ -25,6 +25,48 @@ The workflow installer does not distinguish between server and client components
 
 If you need help with the customization or the deployment of a sample workflow and want to use it for productive puropses please contact sales@coolorange.com.
 
+## Debugging
+powerJobs Processor and powerJobs Client scripts can run independently from Vault in a PowerShell code editor such as 'Windows PowerShell ISE' or 'Visual Studio Code'.
+This is handy when a script needs to be changed to modify the business logic.
+
+To provide a context when executed independently, the scripts need to establish a connection to Vault and retrieve a file or any other entity. This would usually be done automatically by powerJobs Processor or powerJobs Client.
+
+### powerJobs Processor Scripts
+
+```powershell
+if (-not $IAmRunningInJobProcessor) {
+    Import-Module powerJobs
+    
+    Open-VaultConnection -Server "localhost" -Vault "Vault" -User "Administrator" -Password ""
+    
+    $file = Get-VaultFile -Properties @{Name="Scissors.idw"}
+}
+```
+
+This additional code needs to be placed on top of a powerJobs job script. It imports the required PowerShell modules, performs a sign-in to Vault, and uses the file 'Scissors.idw' every time the script gets executed by anything other than powerJobs Processor.
+
+### powerJobs Client (a.k.a. powerEvents) Scripts
+
+```powershell
+if ($Host.Name -ne "powerEvents Webservice Extension") { 
+    Import-Module powerEvents
+    
+    function Register-VaultEvent($EventName, $Action) {}
+    function Add-VaultRestriction($EntityName, $Message) { Write-Error "$($EntityName): $($Message)" }
+
+    Open-VaultConnection -Server "localhost" -Vault "Vault" -User "Administrator" -Password ""
+
+    $file = Get-VaultFiles -Properties @{ Name = "Blower.idw" }
+    $file | Add-Member NoteProperty "_NewLifeCycleDefinition" "Flexible Release Process"
+    $file | Add-Member NoteProperty "_NewState" "Released"
+    $files = @($file)
+
+    YourFunctionThatWouldNormallyByExecutedByTheEvent $files $true
+}
+```
+
+This additional code needs to be placed before the 'Register-VaultEvent' cmdlet and after the function that is executed by the event (in the example above this would be *YourFunctionThatWouldNormallyByExecutedByTheEvent*). The code imports the required PowerShell modules, introduces temporary functions, performs a sign-in to Vault, and uses the file 'Blower.idw' every time the script gets executed by anything other than powerJobs Client. In addition it temorarily adds the properties "_NewLifeCycleDefinition" and "_NewState" to the Blower.idw file for the business logic to mimic a lifecycle state transition for debugging purposes.
+
 ## Author
 coolOrange S.r.l.
 
