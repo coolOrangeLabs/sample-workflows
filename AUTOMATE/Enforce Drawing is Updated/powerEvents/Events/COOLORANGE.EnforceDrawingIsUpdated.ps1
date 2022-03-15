@@ -36,7 +36,7 @@ function EnforceDrawingIsUpdated($files) {
         $children = $vault.DocumentService.GetLatestFilesByIds($fileAssocLites.CldFileId)
         foreach ($child in $children) {
             if ($drawingFile._ModDate -lt $child.ModDate) {
-                Add-VaultRestriction -EntityName $drawingFile._Name -Message "The drawing cannot be released. $($child.Name) is has been changed and the drawing is not up-to-date"
+                Add-VaultRestriction -EntityName "$($drawingFile._Name) - $($($child.Name))" -Message "The drawing '$($drawingFile._Name)' cannot be released. The child component '$($child.Name)' is has been changed and the drawing is not up-to-date"
             }
         }
     }
