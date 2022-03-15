@@ -6,9 +6,7 @@
 # Copyright (C) 2022 COOLORANGE S.r.l.                                         #
 #==============================================================================#
 
-function EnforceDrawingIsUpdated($files, $successful) {
-    if(-not $successful) { return }
-    
+function EnforceDrawingIsUpdated($files) {
     $drawingFiles = @($files | Where-Object { @("idw","dwg") -icontains $_._Extension -and "Inventor" -eq $_._Provider })
     if (-not $drawingFiles) {
         return
@@ -44,4 +42,4 @@ function EnforceDrawingIsUpdated($files, $successful) {
     }
 }
 
-Register-VaultEvent -EventName UpdateFileStates_Post -Action 'EnforceDrawingIsUpdated'
+Register-VaultEvent -EventName UpdateFileStates_Restrictions -Action 'EnforceDrawingIsUpdated'
