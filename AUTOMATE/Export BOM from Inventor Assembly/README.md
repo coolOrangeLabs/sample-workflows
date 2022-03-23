@@ -1,7 +1,7 @@
 [![powerJobs](https://img.shields.io/badge/powerJobs_Processor-22.0.19-orange.svg)](https://www.coolorange.com/powerjobs)
 [![powerJobs Client](https://img.shields.io/badge/powerJobs_Client-22.0.4-orange.svg)](https://www.coolorange.com/powerjobs)
 
-# Extract BOMs from Vault Files
+# Export BOM from Inventor Assembly
 
 ## Description
 
