@@ -9,10 +9,13 @@
 function EnforceStructuredBomEnabled($files) {
 	$affectedObjectsList = New-Object System.Collections.Generic.List[string]
 
-	#$releasedFiles = @($files | Where-Object { $_._Extension -eq "iam" })
-	$releasedFiles = @($files | Where-Object { $_._Extension -eq "iam" -and $_._ReleasedRevision -eq $true })
+	$assemblyFiles = @($files | Where-Object { $_._Extension -eq "iam" })
+	$assemblyFiles = $assemblyFiles | Where-Object {
+        $newLifecycleState = Get-VaultLifecycleState -LifecycleDefinition $_._NewLifeCycleDefinition -State $_._NewState
+        $newLifecycleState.ReleasedState -eq $true
+    }
 
-	foreach ($file in $releasedFiles) {
+	foreach ($file in $assemblyFiles) {
 		$structuredBomEnabled = $false
 		$bom = $vault.DocumentService.GetBOMByFileId($file.Id)
 		foreach ($schm in $bom.SchmArray) {
@@ -34,9 +37,8 @@ function EnforceStructuredBomEnabled($files) {
 function SubmitExportBomJob($files, $successful) {
 	if (-not $successful) { return }
 
-	#$releasedFiles = @($files | Where-Object { $_._Extension -eq "iam" })
 	$releasedFiles = @($files | Where-Object { $_._Extension -eq "iam" -and $_._ReleasedRevision -eq $true })
-	
+
 	foreach ($file in $releasedFiles) {
 		$jobType = "COOLORANGE.Export.BOM"
 		Write-Host "Adding job '$jobType' for file '$($file._Name)' to queue."
