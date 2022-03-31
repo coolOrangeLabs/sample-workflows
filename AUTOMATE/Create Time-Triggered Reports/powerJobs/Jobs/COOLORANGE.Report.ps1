@@ -19,7 +19,7 @@ Write-Host "Starting job '$($job.Name)'..."
 
 #region Settings
 # Full Path of the RDLC report template file. This file needs to accessible by powerJobs on the Vault Job Processor machine
-$reportFileLocation = "C:\Program Files\Autodesk\Vault Client 2022\Explorer\Report Templates\File Transmittal.rdlc"
+$reportFileLocation = "C:\ProgramData\coolOrange\powerJobs\Jobs\COOLORANGE.Report.rdlc"
 # Name of the Saved Search. This Saved Search needs to available on the Vault Job Processor machine with the exact same server name and Vault name
 $savedSearchName = "NAME_OF_MY_SEARCH_FOLDER"
 # Name of the Report exported to PDF
