@@ -5,11 +5,14 @@
 ## Description
 This workflow uses coolOrange **powerJobs** to create a STL file from an Inventor model (IPT or IAM).
 
+### Benefit:
+Reducing time and costs by automating neutral format generation.
+
 ## Prerequisites
 [powerJobs Processor](https://www.coolorange.com/powerjobs) version 22.0.19 or later must be installed on the Vault Job Processor machine(s)  
 
 ## Job Settings
-The settings of jobs can be adjusted using the [powerJobs  settings dialog](https://doc.coolorange.com/projects/coolorange-powerjobsprocessordocs/en/stable/job_configuration/#powerjobs-settings-dialog).
+The settings of the job and especially common STL settings can be adjusted using the [powerJobs  settings dialog](https://doc.coolorange.com/projects/coolorange-powerjobsprocessordocs/en/stable/job_configuration/#powerjobs-settings-dialog).
 
 ## Job Trigger
 In order to configure the job to be executed on a file lifecycle state transition, Vault's Custom Job Types functionality can be used. [More information](https://doc.coolorange.com/projects/coolorange-powerjobsprocessordocs/en/stable/getting_started/#how-to-embed-the-job-in-a-status-change)
