@@ -4,10 +4,12 @@
 
 
 ## Description
-PDFs are often shared on a network folder and need to be cleaned-up when a new version of the drawing is released to copy the new PDF to the network folder. If the old PDF cannot be deleted the state change must be restricted.
+PDFs are often shared in a **network folder for production** on the shop floor. During the next release, the PDF must be replaced with the new version.  If the old PDF cannot be deleted, the status change must be prevented.
 This workflow uses coolOrange **powerJobs Client** to restrict the release of the selected file when the deletion of the shared PDF file fails.
-Note: 
-The script assumes that the PDF on the network folder is also linked as an attachment to the drawing in Vault in order to determine the file name of the PDF. If this is not the case, the PDF filename must be adjusted in the script. 
+***Note:*** The script assumes that the PDF on the network folder is also linked as an attachment to the drawing in Vault in order to determine the file name of the PDF. If this is not the case, the PDF filename must be adjusted in the script. 
+
+## Benefit:
+Reduce unnecessary costs and increase process reliability by avoiding outdated PDFs for production.
 
 ## Prerequisites
 [powerJobs Client](https://www.coolorange.com/powerjobs) version 22.0.4 or later must be installed on the Vault Explorer machine(s)  
