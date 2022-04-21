@@ -6,6 +6,7 @@
 ## Description
 PDFs are often shared in a **network folder for production** on the shop floor. During the next release, the PDF must be replaced with the new version.  If the old PDF cannot be deleted, the status change must be prevented.
 This workflow uses coolOrange **powerJobs Client** to restrict the release of the selected file when the deletion of the shared PDF file fails.
+
 ***Note:*** The script assumes that the PDF on the network folder is also linked as an attachment to the drawing in Vault in order to determine the file name of the PDF. If this is not the case, the PDF filename must be adjusted in the script. 
 
 ## Benefit:
