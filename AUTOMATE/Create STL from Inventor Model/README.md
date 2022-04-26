@@ -3,10 +3,7 @@
 # Create STL from Inventor Model
 
 ## Description
-This workflow uses coolOrange **powerJobs** to create a STL file from an Inventor model (IPT or IAM).
-
-### Benefit:
-Reducing time and costs by automating neutral format generation.
+This workflow uses coolOrange **powerJobs** to create a STL file from an Inventor model (IPT or IAM). The generated STL file can be shared through Vault or by copying it to a configurable network folder. The automated generation and sharing of the STL file on a state change reduces time and costs.
 
 ## Prerequisites
 [powerJobs Processor](https://www.coolorange.com/powerjobs) version 22.0.19 or later must be installed on the Vault Job Processor machine(s)  
