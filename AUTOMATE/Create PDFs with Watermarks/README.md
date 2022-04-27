@@ -3,10 +3,13 @@
 # Create PDFs with Watermarks
 
 ## Description
-This workflow uses coolOrange **powerJobs** to create a PDF file from a CAD drawing and stamp a watermark to the PDF file. There are two flavors of this workflow:
+This workflow uses coolOrange **powerJobs** to create a PDF file from a CAD drawing and stamp a watermark to the PDF file. Such a watermark can be e.g. the state of the drawing that is used in the shop floor for production. Settings like the text size, color, orientation or aligment can be easily configured in the script of **settings dialog**. Thus, this workflow helps to build reliable processes and reduces unnecessary costs.  
+There are two flavors of this workflow:
 
-*COOLORANGE.CreatePDFAndWatermark* creates a PDF file from a CAD drawing and adds a watermark in the middle of the drawing.  
-*COOLORANGE.CreatePDFAndWatermarkBottom* creates a PDF file from a CAD drawing and adds a watermark to the botton right corner.
+* *COOLORANGE.CreatePDFAndWatermark* creates a PDF file from a CAD drawing and adds a watermark in the middle of the drawing.  
+![PDF-Watermark_1](https://user-images.githubusercontent.com/36193155/165478911-ba3c2837-7efc-4290-be23-6eabd1844702.jpg)  
+* *COOLORANGE.CreatePDFAndWatermarkBottom* creates a PDF file from a CAD drawing and adds a watermark to the botton right corner.
+![PDF-Watermark_3](https://user-images.githubusercontent.com/36193155/165480615-f54f6841-c003-4033-a10c-16f699267b8b.jpg)
 
 ## Prerequisites
 [powerJobs Processor](https://www.coolorange.com/powerjobs) version 22.0.19 or later must be installed on the Vault Job Processor machine(s)  
