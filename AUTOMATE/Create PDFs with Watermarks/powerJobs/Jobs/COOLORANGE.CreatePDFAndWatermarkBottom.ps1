@@ -15,6 +15,9 @@ if (-not $IAmRunningInJobProcessor) { # Only used for debugging purposes!
 } 
 #endregion
 
+# Do not delete the next line. Required for the powerJobs Settings Dialog to determine the entity type for lifecycle state change triggers.
+# JobEntityType = FILE
+
 #region Settings
 # PDF settings
 # To include the Revision of the main file in the PDF name set $true, otherwise $false
