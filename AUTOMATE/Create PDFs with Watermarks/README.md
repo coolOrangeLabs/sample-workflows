@@ -8,7 +8,7 @@ There are two flavors of this workflow:
 
 * *COOLORANGE.CreatePDFAndWatermark* creates a PDF file from a CAD drawing and adds a watermark in the middle of the drawing.  
 ![PDF-Watermark_1](https://user-images.githubusercontent.com/36193155/165478911-ba3c2837-7efc-4290-be23-6eabd1844702.jpg)  
-* *COOLORANGE.CreatePDFAndWatermarkBottom* creates a PDF file from a CAD drawing and adds a watermark to the botton right corner.
+* *COOLORANGE.CreatePDFAndWatermarkBottom* creates a PDF file from a CAD drawing and adds a watermark to the botton right corner.  
 ![PDF-Watermark_3](https://user-images.githubusercontent.com/36193155/165480615-f54f6841-c003-4033-a10c-16f699267b8b.jpg)
 
 ## Prerequisites
