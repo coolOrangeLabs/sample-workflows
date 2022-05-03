@@ -6,6 +6,9 @@
 # Copyright (C) 2022 COOLORANGE S.r.l.                                         #
 #==============================================================================#
 
+# Do not delete the next line. Required for the powerJobs Settings Dialog to determine the entity type for lifecycle state change triggers.
+# JobEntityType = FILE
+
 #region Settings
 # Specify a network share into which the PDFs are copied by powerJobs Processor (e.g. \\SERVERNAME\Share\Public\PDFs\)
 $networkFolder = "\\SERVERNAME\Share\Public\PDFs\"
