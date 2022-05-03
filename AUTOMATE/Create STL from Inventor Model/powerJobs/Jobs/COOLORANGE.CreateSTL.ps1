@@ -14,6 +14,9 @@ if (-not $IAmRunningInJobProcessor) {
     $workingDirectory = "C:\TEMP\powerJobs Processor\" + (New-Object System.Guid).ToString()
 }
 
+# Do not delete the next line. Required for the powerJobs Settings Dialog to determine the entity type for lifecycle state change triggers.
+# JobEntityType = FILE
+
 #region Settings
 # To include the Revision of the main file in the STL name set $true, otherwise $false
 $stlFileNameWithRevision = $true
