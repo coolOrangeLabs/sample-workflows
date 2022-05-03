@@ -6,6 +6,9 @@
 # Copyright (C) 2022 COOLORANGE S.r.l.                                         #
 #==============================================================================#
 
+# Do not delete the next line. Required for the powerJobs Settings Dialog to determine the entity type for lifecycle state change triggers.
+# JobEntityType = FILE
+
 #region Debug
 if (-not $IAmRunningInJobProcessor) { # Only used for debugging purposes!
     Import-Module powerJobs
