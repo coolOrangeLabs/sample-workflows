@@ -4,10 +4,11 @@
 # Send Email Notifications
 
 ## Description
-This workflow uses coolOrange **powerJobs Client** to expose a dialog where users can select one or multiple user groups from Vault when file state changes.
-
-
+This workflow uses coolOrange **powerJobs Client** to expose a dialog where users can select one or multiple user groups from Vault when file state changes.  
 After the group has been selected a job is automaticall triggered. The job is executed by coolOrange **powerJobs Processor** and sends an email notification to all users of the selected groups.
+This workflow helps you to improve the collaboration in the design team and give more tranparency to the team.
+
+![Email-notification](https://user-images.githubusercontent.com/36193155/167085870-9494440e-9de7-43b9-84f7-72c33abac6f8.jpg)
 
 
 ## Prerequisites
