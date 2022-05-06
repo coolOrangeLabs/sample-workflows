@@ -21,7 +21,7 @@ In order to configure the workflow to be executed in a specific interval the fil
 {
  "Trigger":
   {
-    "TimeBased":	"0 0 8 ? * MON,TUE,WED,THU,FRI *",
+    "TimeBased":	"0 30 8 ? * MON,TUE,WED,THU,FRI *",
     "Vault":		"Vault",
     "Priority":		100,
     "Description":	"Queries Vault and creates a Report as PDF"
@@ -42,7 +42,7 @@ The following settings have to be adjusted:
     <tr>
       <td>Time Based</td>
       <td>Indicates when / how often the job should be triggered (cron syntax)</td>
-      <td>Every weekday at 8am</td>
+      <td>Every weekday at 8:30 am</td>
     </tr>
     <tr>
       <td>Vault</td>
