@@ -4,13 +4,13 @@
 
 
 ## Description
-PDFs are often shared in a **network folder for production** on the shop floor. During the next release, the PDF must be replaced with the new version.  If the old PDF cannot be deleted, the status change must be prevented.
+PDFs are often shared in a **network folder for production** to be accessed by people without access to Vault. These are often considered the **official** version of that drawing. In order for this to always be true, the old version of the PDF must deleted and replaced each time a new official version is released. If the old PDF cannot be deleted, perhaps because someone has it opened or locked, the release must be prevented and the user notified so they can fix the shared file.
 This workflow uses coolOrange **powerJobs Client** to restrict the release of the selected file when the deletion of the shared PDF file fails.
 
-***Note:*** The script assumes that the PDF on the network folder is also linked as an attachment to the drawing in Vault in order to determine the file name of the PDF. If this is not the case, the PDF filename must be adjusted in the script. 
+***Note:*** The script assumes that the PDF on the network folder is also linked as an attachment to the drawing in Vault in order to determine the file name of the PDF. If this is not the case, the PDF filename must be adjusted in the script. There are, of course, variations on this general approach that can be achieved by modifying the scripts.
 
 ## Benefit:
-Reduce unnecessary costs and increase process reliability by avoiding outdated PDFs for production.
+Having valid artifacts on shared drives is crucial to downstream processes of all kinds. Out of date drawings - or other files - on shared drives can cause very expensive production, procurement and tooling mistakes including buying the wrong parts, making out of spec parts to stock or retooling machines incorrectly. All of these cause waste of time, money and materials.
 
 ## Prerequisites
 [powerJobs Client](https://www.coolorange.com/powerjobs) version 22.0.4 or later must be installed on the Vault Explorer machine(s)  
