@@ -7,6 +7,11 @@ This workflow uses coolOrange **powerJobs Processor** to automatically query fil
 
 ![vault-Report](https://user-images.githubusercontent.com/36193155/166458090-79ebc61e-196e-444f-a353-df77c5a24f37.jpg)
 
+## Benefits
+There are many time consuming, tedious and error-prone tasks that are perfect candidates for automation that don't need to be done immediately in response to a Vault event such as a lifecycle state change or new file check-in. Sometimes these are also compute intensive and could slow down your Vault Server, Job Processor or network if they ran during regular working hours. Other tasks, like regular reporting, need to be run at specific intervals - like nightly, weekly or monthly.
+
+Many of these are perfect candidates to run on a timer. powerJobs let's you design the schedule for each job and then rest assured that powerJobs will never forget to do your tedious tasks for you, exactly when you want it done!
+
 ## Prerequisites
 [powerJobs](https://www.coolorange.com/powerjobs) version 22.0.19 or later must be installed on the Vault Job Processor machine(s)
 
