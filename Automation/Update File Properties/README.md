@@ -19,6 +19,9 @@ The  4 UDPs are are emptied in the function ***PostUpdateFileStates*** after the
 
 The sample uses the file category name "Engineering" as a 'condition'. Other categories as well as other objects like file extesnsions can be used as a 'condition'.
 
+## Benefit ##
+One of the most important reasons to use a PDM system like Autodesk Vault is that it serves as a permanent record of who created, checked and approved each change to each design file. It also keeps permanent records of changes to other metadata in the form of Properties. This critical information can also be mapped into your CAD files where it can be used to populate things like title block records. Without this property mapping you can't be sure that your drawings accurately reflect the true state of your data's lifecycle. This can be critical in applications where the provenance of design changes must be accurate for regulatory or industry standard best practices.
+
 ## Prerequisites
 [powerJobs Client](https://www.coolorange.com/powerjobs) version 22.0.4 or later must be installed on the Vault Explorer machine(s)  
 
