@@ -10,6 +10,8 @@ This workflow helps you to improve the collaboration in the design team and give
 
 ![Email-notification](https://user-images.githubusercontent.com/36193155/167085870-9494440e-9de7-43b9-84f7-72c33abac6f8.jpg)
 
+## Benefit ##
+Sometimes the best way to get information about changes to the right folks is to email it to them. However, we don't always know exactly who should be notified until we've done some of those changes. For example, it is important to send changes to parts that will use certain manufacturing processes to experts to get their feedback before mistakes are made. This may not happen often enough to warrant adding a step to every part approval process using lifecycles, but imporant enough to make it easy to do correctly when appropriate. In this sample, we show you how to extend the Vault client UI to allow you to choose groups or individuals for notification right at the time when you make a given lifecycle state change. Sometimes manual is the best way...
 
 ## Prerequisites
 [powerJobs Processor](https://www.coolorange.com/powerjobs) version 22.0.19 or later must be installed on the Vault Job Processor machine(s)  
