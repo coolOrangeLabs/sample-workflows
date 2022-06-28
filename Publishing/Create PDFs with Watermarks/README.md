@@ -11,6 +11,13 @@ There are two flavors of this workflow:
 * *COOLORANGE.CreatePDFAndWatermarkBottom* creates a PDF file from a CAD drawing and adds a watermark to the botton right corner.  
 ![PDF-Watermark_3](https://user-images.githubusercontent.com/36193155/165480615-f54f6841-c003-4033-a10c-16f699267b8b.jpg)
 
+## Benefit ##
+One of the most common things Vault users do is publish viewable versions of their drawings to a shared drive for consumption by people who are not Vault or CAD users. These are used on the shop floor or in purchasing or for review by non-technical functions in the company. Watermarks are used to communicate vital status information that would not otherwise be available to those who are not using the Vault. For example, it might be useful to show people an as yet unreleased version of a drawing to communicate a potential change to come, HOWEVER, it is vitally important that it is clear the drawing is not yet approved for use.
+
+Why does this matter? 
+
+Imagine working on a change to a commonly used design where you are contemplating using a new part or manufacturing process. You may very well want to show this to folks in procurement or on the shop floor to get feedback. However, if it isn't clear that the design hasn't been approved yet, someone in another department might order these new expensive parts or start creating expensive tooling to use that new process. It's not uncommon for these kinds of communication mistakes to be very expensive and time consuming to fix. All because you didn't have a watermark making it obvious that this design is Work-in-Progress or Obsolete.
+
 ## Prerequisites
 [powerJobs Processor](https://www.coolorange.com/powerjobs) version 22.0.19 or later must be installed on the Vault Job Processor machine(s)  
 
