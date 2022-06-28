@@ -3,11 +3,11 @@
 # Four Eyes Check
 
 ## Description
-Use the following sample workflow when you want to increase your processes.  
-For a release process that involves multiple approvers, a file in Vault should not be released by the same user that previously set the same file to a "For Review" state.  
-This workflow uses coolOrange **powerJobs Client** to restrict the release of a file when it was transitioned to "For Review" by the same user.  
+For a release process that involves approval step(s) it is generally considered a best practice to require a different person for successive steps. In the example, we show how **powerJobs Client** can be used to enforce a workflow where the person who releases a file is different than the one who reviews it. Variations on this theme can be configured to match your particular best practices, of course. 
 ![DLG_4eyesCheck](https://user-images.githubusercontent.com/36193155/167151141-3294b521-d102-4358-a3b8-ca550b75a5b9.jpg)
 
+## Benefit
+This is yet another examples of **powerJobs Client** acting as "guardrails" for your engineering processes. Assuring that no one ignores this kind of best practice "just this once" is the only way you can be sure that you maintain process integrity and your data stays clean.
 ## Prerequisites
 [powerJobs Client](https://www.coolorange.com/powerjobs) version 22.0.4 or later must be installed on the Vault Explorer machine(s)
 
