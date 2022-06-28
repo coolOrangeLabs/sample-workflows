@@ -7,7 +7,8 @@ When a PDF or any other neutral format of an Inventor drawing is created by a Jo
 
 This workflow uses coolOrange **powerJobs Client** to restrict the release of a drawing file - and with that the generation of the neutral format - when when the drawing is older than any of the parts or assemblies that are used in the drawing's structure. For performance reasons, the workflow does not open the drawing file but analyses the references stored in the Vault database to find all files that are involved in the structure of the drawings that are about to be released.
 
-This workflow improves the process reliability by ensuring the drawing is up-to-date before it can be released.
+## Benefit
+This workflow improves the reliability of your publishing process by ensuring the drawing is up-to-date before it can be released and that published artifacts, like PDFs, are always done with valid drawings. It also means that the publishing step, when done on the Job Processor, need not Get and download all the refrenced model files to make a valid drawing. Instead, the "fastopen" option can be used to create the PDF using only the (usually much smaller) IDW or DWG file as its sole input. For drawings of large complex models this can be a significant time savings.
 
 ## Prerequisites
 [powerJobs Client](https://www.coolorange.com/powerjobs) version 22.0.4 or later must be installed on the Vault Explorer machine(s)
