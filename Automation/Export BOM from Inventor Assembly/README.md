@@ -13,6 +13,13 @@ When the corresponding job is executed by coolOrange **powerJobs Processor** it 
 
 ![](https://user-images.githubusercontent.com/5640189/159669328-dd70fd63-38f1-487e-a06f-66ab90160761.png)
 
+## Benefit
+
+CAD wielding engineers almost never work in a vacuum. The result of their work often initiates a chain of actions by other people with other jobs related to product design, but who don't use CAD or Vault. Often these folks just need a precise list of all the parts that the engineer specified. This can be for procurement, inventory management, shop floor and machine station scheduling and even as input to other enterprise software systems like ERP. 
+
+Wether the next user reads the BOM into Excel for ad-hoc processing or feeds it directly into their ERP or Procurement system it is absolutely vital that the engineer doesn't forget to generate the structured BOM in Inventor. Failure to update the BOM can have consequences ranging from the minor annoyance - like the engineer having to respond to email asking for it from a purchasing agent - to the catestrophic - that same purchasing agent orders thousands of the wrong parts because they didn't even know there *was* a new BOM.
+
+
 ## Prerequisites
 [powerJobs Processor](https://www.coolorange.com/powerjobs) version 22.0.19 or later must be installed on the Vault Job Processor machine(s)  
 [powerJobs Client](https://www.coolorange.com/powerjobs) version 22.0.4 or later must be installed on the Vault Explorer machine(s)  
