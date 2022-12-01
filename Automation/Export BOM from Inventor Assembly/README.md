@@ -7,11 +7,11 @@
 
 This workflow uses coolOrange **powerJobs Client** to check if the structured BOM is enabled when releasing an Inventor assembly. If the Structured BOM is disabled, the file cannot be released, otherwise a job is triggered automatically. 
 
-![](https://user-images.githubusercontent.com/5640189/159670406-4da7e053-c622-4107-80ad-43c56e7d77c8.PNG)
+<img src="https://user-images.githubusercontent.com/5640189/159670406-4da7e053-c622-4107-80ad-43c56e7d77c8.PNG" width="400">
 
 When the corresponding job is executed by coolOrange **powerJobs Processor** it extracts the Structured BOM data from the vaulted assembly, creates a CSV file with this information and saves the CSV file to a shared folder so that it can be consumed by other software such as an ERP system.
 
-![](https://user-images.githubusercontent.com/5640189/159669328-dd70fd63-38f1-487e-a06f-66ab90160761.png)
+<img src="https://user-images.githubusercontent.com/5640189/159669328-dd70fd63-38f1-487e-a06f-66ab90160761.png" width="700">
 
 ## Benefit
 
