@@ -23,13 +23,13 @@ function EnforceDrawingIsUpdated($files) {
         $fileAssocLites = $vault.DocumentService.GetFileAssociationLitesByIds(
             @($drawingFile.Id),
             [Autodesk.Connectivity.WebServices.FileAssocAlg]::Actual,
-            [Autodesk.Connectivity.WebServices.FileAssociationTypeEnum]::Dependency,
-            $false,
-            [Autodesk.Connectivity.WebServices.FileAssociationTypeEnum]::Dependency,
-            $true,
-            $true,
-            $false,
-            $false)
+            [Autodesk.Connectivity.WebServices.FileAssociationTypeEnum]::None, #include parents
+            $false, #recurse parents
+            [Autodesk.Connectivity.WebServices.FileAssociationTypeEnum]::Dependency, #include children
+            $false, #recuse children
+            $true, #include libraries
+            $false, #include related documents
+            $false) #include hidden
 
         if (-not $fileAssocLites) {
             continue
