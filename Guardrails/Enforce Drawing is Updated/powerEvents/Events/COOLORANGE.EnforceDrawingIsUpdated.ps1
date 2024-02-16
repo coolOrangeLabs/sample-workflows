@@ -7,7 +7,7 @@
 #==============================================================================#
 
 function EnforceDrawingIsUpdated($files) {
-    $affectedObjectsList = New-Object System.Collections.Generic.List[string]
+    $affectedObjectsList = @()
 
     $drawingFiles = @($files | Where-Object { @("idw","dwg") -icontains $_._Extension -and "Inventor" -eq $_._Provider })
     if (-not $drawingFiles) {
@@ -35,13 +35,12 @@ function EnforceDrawingIsUpdated($files) {
             continue
         }
     
-        $children = $vault.DocumentService.GetLatestFilesByIds($fileAssocLites.CldFileId)
-        foreach ($child in $children) {
-            if ($drawingFile._ModDate -lt $child.ModDate) {
-                $affectedObject = "$($drawingFile._Name) - $($($child.Name))"
-                if (-not $affectedObjectsList.Contains($affectedObject)) {
-                    Add-VaultRestriction -EntityName $affectedObject -Message "The drawing '$($drawingFile._Name)' cannot be released. The child component '$($child.Name)' is has been changed and the drawing is not up-to-date"
-                    $affectedObjectsList.Add($affectedObject)
+        $vault.DocumentService.GetFilesByIds($fileAssocLites.CldFileId) | ForEach-Object {
+            if ($_.VerNum -lt $_.MaxCkInVerNum) {
+                $affectedObject = "$($drawingFile._Name) - $($_.Name)"
+                if (-not $affectedObjectsList.Contains($affectedObject) ) {
+                    Add-VaultRestriction -EntityName $affectedObject -Message "The drawing '$($drawingFile._Name)' cannot be released. The child component '$($_.Name)' is has been changed and the drawing is not up-to-date"
+                    $affectedObjectsList += $affectedObject
                 }
             }
         }
